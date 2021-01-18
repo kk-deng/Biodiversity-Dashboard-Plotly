@@ -1,4 +1,4 @@
-url = "../samples.json"
+url = "../data/samples.json"
 
 d3.json(url).then(data => {
     var metadata = data.metadata;
