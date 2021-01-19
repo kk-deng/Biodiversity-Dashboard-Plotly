@@ -92,19 +92,7 @@ d3.json(url).then(data => {
 
 
                 // Adding a gauge
-                var trace3 = {
-                    domain: {x: [0, 1], y: [0, 1]},
-                    value: demoInfo.wfreq,
-                    title: {text: "Wash Frequency"},
-                    type: "indicator",
-                    mode: "gauge+number"
-                }
-
-                var gaugeData = [trace3]
-
-                var gaugeLayout = { width: 500, height: 400, margin: { t: 0, b: 0 } }
-
-                Plotly.newPlot('gauge', gaugeData, gaugeLayout);
+                renderGauge(demoInfo.wfreq);
             };
         });
     };
