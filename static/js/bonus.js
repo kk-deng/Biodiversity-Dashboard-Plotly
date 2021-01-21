@@ -30,7 +30,7 @@ function renderGauge(washFreq) {
         x: [0], y:[0],
         marker: {size: 15, color:'850000'},
         showlegend: false,
-        name: 'speed',
+        name: 'Wash Freq',
         text: washFreq,
         hoverinfo: 'text+name'
     };
