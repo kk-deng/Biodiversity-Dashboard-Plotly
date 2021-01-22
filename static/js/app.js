@@ -8,19 +8,18 @@ function dropdownBuilder(selDataset, names) {
     })
 } 
 
-function graphBuilder(samples, metadata, subjectID) {
+function graphBuilder(samples, metadata, subjectID, oldResult) {
     // Find the sample by its subject id
     samples.map(sample => {
         // Find the sample object in the samples array by its ID
-        if (sample.id == subjectID) {
-            
+        switch(subjectID) {
+            case sample.id :
             // var sortedSamples = sample.sort( (a, b) => b.sample_values - a.sample_values);
             // var reversedData = slicedData.reverse();
             var slicedSampleValues = sample.sample_values.slice(0, 10)
             var slicedOtuID = sample.otu_ids.slice(0, 10)
             var slicedLabels = sample.otu_labels.slice(0, 10)
             
-            // console.log(slicedData)
             var trace1 = {
                 x: slicedSampleValues.reverse(),
                 y: slicedOtuID.map(otuID => `OTU ${otuID}`).reverse(),
@@ -32,7 +31,7 @@ function graphBuilder(samples, metadata, subjectID) {
             var barData = [trace1];
 
             var barLayout = {
-                title: "Top 10",
+                title: `Top 10 OTUs found in individual ID ${subjectID}`,
                 margin: {t: 50, l: 100}
             }
 
@@ -53,11 +52,13 @@ function graphBuilder(samples, metadata, subjectID) {
             var bubbleData = [trace2];
               
             var bubbleLayout = {
+                title: `Bubble Chart of OTUs in individual ID ${subjectID}`,
                 hovermode: "closest",
                 xaxis: {title: "OTU ID"}
             };
               
             Plotly.newPlot("bubble", bubbleData, bubbleLayout);
+            break
         }
 
     })
@@ -75,19 +76,22 @@ function graphBuilder(samples, metadata, subjectID) {
                 demoDiv.append("h6").text(`${key}: ${value}`)
             });
 
-
             // Adding a gauge
             renderGauge(demoInfo.wfreq);
+
+
         };
     });
 };
 
 // Main function
 d3.json("../data/samples.json").then(data => {
+    // Import data
     var metadata = data.metadata;
     var names = data.names;
     var samples = data.samples;
 
+    // Select the dataset div in html
     var selDataset = d3.select("#selDataset");
 
     // Display Dropdown Menu options
@@ -100,10 +104,10 @@ d3.json("../data/samples.json").then(data => {
     selDataset.on("change", optionChanged);
 
     function optionChanged() {
-        // d3.select("#selDataset option:checked").text()
-        // Return the selected value
+        // Return the selected value from dropdown menu
         var subjectID = selDataset.node().value
 
+        // Build all graphics
         graphBuilder(samples, metadata, subjectID)
         
     };
