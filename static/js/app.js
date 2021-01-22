@@ -1,4 +1,4 @@
-function displayOptions (selDataset, names) {
+function dropdownBuilder(selDataset, names) {
     // With names data, display all names
     names.map(uto_name => {
         // In the dropdown menu, append <option> tags with subject ID 
@@ -14,7 +14,6 @@ function graphBuilder(samples, metadata, subjectID) {
         // Find the sample object in the samples array by its ID
         if (sample.id == subjectID) {
             
-
             // var sortedSamples = sample.sort( (a, b) => b.sample_values - a.sample_values);
             // var reversedData = slicedData.reverse();
             var slicedSampleValues = sample.sample_values.slice(0, 10)
@@ -81,19 +80,22 @@ function graphBuilder(samples, metadata, subjectID) {
             renderGauge(demoInfo.wfreq);
         };
     });
-}
+};
 
-url = "../data/samples.json"
-
-d3.json(url).then(data => {
+// Main function
+d3.json("../data/samples.json").then(data => {
     var metadata = data.metadata;
     var names = data.names;
     var samples = data.samples;
 
     var selDataset = d3.select("#selDataset");
 
-    displayOptions(selDataset, names);
-    
+    // Display Dropdown Menu options
+    dropdownBuilder(selDataset, names);
+
+    // Initialize with the first sample "940" as the default result
+    graphBuilder(samples, metadata, names[0])
+
     // Set a listener for the dropdown menu
     selDataset.on("change", optionChanged);
 
