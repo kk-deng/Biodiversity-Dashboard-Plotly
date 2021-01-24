@@ -5,44 +5,35 @@ Build an interactive dashboard to explore the Belly Button Biodiversity dataset,
 
 Following files are attached:
 
-1. <a href="https://github.com/kk-deng/JavaScript-Challenge/blob/main/UFO-level-2/index.html">index.html</a>: Main page with required HTML structures.
+1. <a href="https://github.com/kk-deng/Plotly-Challenge/blob/main/Plotly-Dashboard/index.html">index.html</a>: Main page with an interactive dashboard
 
-2. <a href="https://github.com/kk-deng/JavaScript-Challenge/blob/main/UFO-level-2/static/js/app.js">app.js</a>: Main D3 JavaScript file to populate data dynamically. 
+2. <a href="https://github.com/kk-deng/Plotly-Challenge/blob/main/Plotly-Dashboard/static/js/app.js">app.js</a>: Main JavaScript file for handling and displaying data. 
 
-## Summary of functions
+3. <a href="https://github.com/kk-deng/Plotly-Challenge/blob/main/Plotly-Dashboard/static/js/bonus.js">/bonus.js</a>: Bonus JavaScript file for two types of gauge chart. 
 
-* A function which takes input data array to append data into HTML:
+## Summary of features
 
-```javascript
-// Build a callable function to convert data into a table
-function buildData(inputData) {
-    // Get a reference to the table body
-    var tbody = d3.select("tbody");
+Hulcr, J. et al.(2012) A Jungle in There: Bacteria in Belly Buttons are Highly Diverse, but Predictable. Retrieved from: http://robdunnlab.com/projects/belly-button-biodiversity/results-and-data/
 
-    // Clean the existing codes inside tbody html
-    tbody.html("");
+* A dropdown menu with all samples from the data
 
-    // Loop through the data list
-    inputData.forEach(event => {
-        // Append one table row 'tr' for each object
-        var row = tbody.append("tr");
+* A horizontal bar chart
 
-        // Use Object entries to loop each key value pair
-        Object.entries(event).forEach(([_, value]) => {
-            // Append one cell per column
-            var cell = row.append("td");
-            cell.text(value);
-        });
-    });
-};
-```
+* A bubble chart
+
+* Demographic information from the sample
+
+### Bonus
+
+Adapt the Gauge Chart from https://plot.ly/javascript/gauge-charts/ to plot the weekly washing frequency of the individual.
+
 
 
 ## View Screenshots
-* Default page
+* Dashboard page with 940 as the default sample (Old gauge chart style)
 
-<img src="https://github.com/kk-deng/JavaScript-Challenge/blob/main/Screenshots/default.png">
+<img src="https://github.com/kk-deng/Plotly-Challenge/blob/main/Screenshots/dashboard.png">
 
-* Multiple filters
+* Dashboard page with 940 as the default sample (Old gauge chart style)
 
-<img src="https://github.com/kk-deng/JavaScript-Challenge/blob/main/Screenshots/multifilter.png">
+<img src="https://github.com/kk-deng/Plotly-Challenge/blob/main/Screenshots/dashboard_new_style.png">
