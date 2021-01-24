@@ -17,14 +17,16 @@ function graphBuilder(samples, metadata, subjectID) {
             // Get the top 10 results from the list
             var slicedSampleValues = sample.sample_values.slice(0, 10).reverse();
             var slicedOtuID = sample.otu_ids.slice(0, 10).reverse();
-            var slicedLabels = sample.otu_labels.slice(0, 10)
+            var slicedLabels = sample.otu_labels.slice(0, 10).reverse();
             
+            // Display bar chart
             var trace1 = {
                 x: slicedSampleValues,
                 y: slicedOtuID.map(otuID => `OTU ${otuID}`),
                 type: "bar",
                 orientation: "h",
-                text: slicedLabels
+                text: slicedLabels,
+                name: subjectID
             };
 
             var barData = [trace1];
@@ -32,7 +34,7 @@ function graphBuilder(samples, metadata, subjectID) {
             var barLayout = {
                 title: `Top 10 OTUs found in individual ID ${subjectID}`,
                 margin: {t: 50, l: 100, b: 20}
-            }
+            };
 
             Plotly.newPlot("bar", barData, barLayout);
 
@@ -98,10 +100,10 @@ function renderPage() {
     
         function optionChanged() {
             // Return the selected value from dropdown menu
-            var subjectID = selDataset.node().value
+            var subjectID = selDataset.node().value;
     
             // Build all graphics
-            graphBuilder(samples, metadata, subjectID)
+            graphBuilder(samples, metadata, subjectID);
             
         };
     });
