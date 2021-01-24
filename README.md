@@ -9,7 +9,7 @@ Following files are attached:
 
 2. <a href="https://github.com/kk-deng/Plotly-Challenge/blob/main/Plotly-Dashboard/static/js/app.js">app.js</a>: Main JavaScript file for handling and displaying data. 
 
-3. <a href="https://github.com/kk-deng/Plotly-Challenge/blob/main/Plotly-Dashboard/static/js/bonus.js">/bonus.js</a>: Bonus JavaScript file for two types of gauge chart. 
+3. <a href="https://github.com/kk-deng/Plotly-Challenge/blob/main/Plotly-Dashboard/static/js/bonus.js">bonus.js</a>: Bonus JavaScript file for two types of gauge chart. 
 
 ## Summary of features
 
@@ -23,6 +23,8 @@ Hulcr, J. et al.(2012) A Jungle in There: Bacteria in Belly Buttons are Highly D
 
 * Demographic information from the sample
 
+* **A checkbox which allows user to choose between Old and New gauge chart style** (Style will be applied after selecting a new sample)
+
 ### Bonus
 
 Adapt the Gauge Chart from https://plot.ly/javascript/gauge-charts/ to plot the weekly washing frequency of the individual.
@@ -30,10 +32,10 @@ Adapt the Gauge Chart from https://plot.ly/javascript/gauge-charts/ to plot the 
 
 
 ## View Screenshots
-* Dashboard page with 940 as the default sample (Old gauge chart style)
+* Dashboard page with 940 as the default sample (**Old** gauge chart style)
 
 <img src="https://github.com/kk-deng/Plotly-Challenge/blob/main/Screenshots/dashboard.png">
 
-* Dashboard page with 940 as the default sample (Old gauge chart style)
+* Dashboard page with 940 as the default sample (**NEW** gauge chart style)
 
 <img src="https://github.com/kk-deng/Plotly-Challenge/blob/main/Screenshots/dashboard_new_style.png">
