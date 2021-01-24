@@ -102,15 +102,14 @@ function renderGauge(washFreq) {
                 }
                 }],
             title: '<b>Belly Button Washing Frequency</b> <br> Scrubes per week',
-            // height: 1000,
-            // width: 1000,
             xaxis: {zeroline:false, showticklabels:false,
                         showgrid: false, range: [-1, 1]},
             yaxis: {zeroline:false, showticklabels:false,
                         showgrid: false, range: [-1, 1]}
         };
-    }
+    };
 
+    // Plot gauge based on different data and layout
     Plotly.newPlot('gauge', gaugeData, gaugeLayout);
  
 };
