@@ -23,6 +23,8 @@ Hulcr, J. et al.(2012) A Jungle in There: Bacteria in Belly Buttons are Highly D
 
 * Demographic information from the sample
 
+* A checkbox which allows user to choose between Old and New gauge chart style (Changes will be applied after re-select sample)
+
 ### Bonus
 
 Adapt the Gauge Chart from https://plot.ly/javascript/gauge-charts/ to plot the weekly washing frequency of the individual.
