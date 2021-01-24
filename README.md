@@ -9,7 +9,7 @@ Following files are attached:
 
 2. <a href="https://github.com/kk-deng/Plotly-Challenge/blob/main/Plotly-Dashboard/static/js/app.js">app.js</a>: Main JavaScript file for handling and displaying data. 
 
-3. <a href="https://github.com/kk-deng/Plotly-Challenge/blob/main/Plotly-Dashboard/static/js/bonus.js">/bonus.js</a>: Bonus JavaScript file for two types of gauge chart. 
+3. <a href="https://github.com/kk-deng/Plotly-Challenge/blob/main/Plotly-Dashboard/static/js/bonus.js">bonus.js</a>: Bonus JavaScript file for two types of gauge chart. 
 
 ## Summary of features
 
@@ -30,10 +30,10 @@ Adapt the Gauge Chart from https://plot.ly/javascript/gauge-charts/ to plot the 
 
 
 ## View Screenshots
-* Dashboard page with 940 as the default sample (Old gauge chart style)
+* Dashboard page with 940 as the default sample (**Old** gauge chart style)
 
 <img src="https://github.com/kk-deng/Plotly-Challenge/blob/main/Screenshots/dashboard.png">
 
-* Dashboard page with 940 as the default sample (Old gauge chart style)
+* Dashboard page with 940 as the default sample (**NEW** gauge chart style)
 
 <img src="https://github.com/kk-deng/Plotly-Challenge/blob/main/Screenshots/dashboard_new_style.png">
