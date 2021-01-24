@@ -5,11 +5,11 @@ Build an interactive dashboard to explore the Belly Button Biodiversity dataset,
 
 Following files are attached:
 
-1. <a href="https://github.com/kk-deng/Plotly-Challenge/blob/main/Plotly-Dashboard/index.html">index.html</a>: Main page with an interactive dashboard
+1. <a href="https://github.com/kk-deng/Plotly-Challenge/blob/main/index.html">index.html</a>: Main page with an interactive dashboard
 
-2. <a href="https://github.com/kk-deng/Plotly-Challenge/blob/main/Plotly-Dashboard/static/js/app.js">app.js</a>: Main JavaScript file for handling and displaying data. 
+2. <a href="https://github.com/kk-deng/Plotly-Challenge/blob/main/static/js/app.js">app.js</a>: Main JavaScript file for handling and displaying data. 
 
-3. <a href="https://github.com/kk-deng/Plotly-Challenge/blob/main/Plotly-Dashboard/static/js/bonus.js">bonus.js</a>: Bonus JavaScript file for two types of gauge chart. 
+3. <a href="https://github.com/kk-deng/Plotly-Challenge/blob/main/static/js/bonus.js">bonus.js</a>: Bonus JavaScript file for two types of gauge chart. 
 
 ## Summary of features
 
