@@ -80,7 +80,7 @@ function graphBuilder(samples, metadata, subjectID) {
 
 // Main function
 function renderPage() {
-    d3.json("samples.json").then(data => {
+    d3.json("static/js/samples.json").then(data => {
         // Import data
         var metadata = data.metadata;
         var names = data.names;
